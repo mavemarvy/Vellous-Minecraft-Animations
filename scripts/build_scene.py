@@ -296,7 +296,7 @@ scene.render.ffmpeg.format="MPEG4"
 scene.render.ffmpeg.codec="H264"
 scene.render.ffmpeg.constant_rate_factor="MEDIUM"
 scene.render.filepath=str(OUT/"animation-silent.mp4")
-scene.render.engine="BLENDER_EEVEE_NEXT" if bpy.app.version >= (4,0,0) else "BLENDER_EEVEE"
+try:\n    scene.render.engine = "BLENDER_EEVEE_NEXT"\nexcept (TypeError, ValueError):\n    scene.render.engine = "BLENDER_EEVEE"
 
 if hasattr(scene.render,"use_motion_blur"):
     try:
