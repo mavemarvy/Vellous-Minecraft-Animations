@@ -1,0 +1,38 @@
+{
+  "project": "short-001-zombie-fight",
+  "policy": "original-first",
+  "music": {
+    "type": "original",
+    "style": "cinematic action short",
+    "mood": "urgent",
+    "copyrighted_trending_audio": false
+  },
+  "sfx": [
+    "wall_break",
+    "wood_debris",
+    "body_air_whoosh",
+    "body_land",
+    "body_roll",
+    "foot_slide",
+    "zombie_growls",
+    "zombie_footsteps",
+    "sword_draw",
+    "weapon_whoosh",
+    "impact_hit",
+    "sub_bass_impact",
+    "camera_rumble",
+    "dust_debris_settle"
+  ],
+  "voice": [],
+  "mix_notes": [
+    "Keep the opening impact louder than the underlying music.",
+    "Duck music briefly before major contact frames.",
+    "Align attack whooshes to the acceleration phase, not the contact frame.",
+    "Use short silence or reduced music immediately before the strongest impact when useful.",
+    "Do not include scraped or unlicensed social-media audio."
+  ],
+  "provenance": {
+    "external_samples": false,
+    "record_created_assets": true
+  }
+}
