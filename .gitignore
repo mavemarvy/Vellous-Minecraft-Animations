@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+
+# Blender temporary files and caches
+*.blend1
+*.blend2
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Render outputs
+/projects/**/exports/*
+/renders/*
+/output/*
+
+# Generated audio
+*.wav
+*.mp3
+*.flac
+
+# Generated video
+*.mp4
+*.mov
+*.avi
+
+# Logs
+*.log
