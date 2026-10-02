@@ -1,0 +1,11 @@
+{
+  "project": "short-001-zombie-fight",
+  "mode": "preview",
+  "fps": 24,
+  "frames": 240,
+  "resolution": {"width": 360, "height": 640, "percentage": 100},
+  "renderer": "EEVEE",
+  "samples": 24,
+  "output": "projects/short-001-zombie-fight/exports/animation-silent.mp4",
+  "final_output": "projects/short-001-zombie-fight/exports/vellous-short-001-preview.mp4"
+}
