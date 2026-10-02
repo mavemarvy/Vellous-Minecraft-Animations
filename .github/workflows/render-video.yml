@@ -24,7 +24,7 @@ jobs:
         run: |
           set -euo pipefail
           sudo apt-get update
-          sudo apt-get install -y blender ffmpeg
+          sudo apt-get install -y blender ffmpeg libegl1 libgl1 libgl1-mesa-dri xvfb mesa-utils
           blender --version
           ffmpeg -version | head -n 1
 
@@ -38,7 +38,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          blender -b --python-exit-code 1 --python scripts/build_scene.py
+          LIBGL_ALWAYS_SOFTWARE=1 xvfb-run -a blender -b --python-exit-code 1 --python scripts/build_scene.py
           test -s projects/short-001-zombie-fight/exports/animation-silent.mp4
           test -s projects/short-001-zombie-fight/exports/generated-preview-scene.blend
 
