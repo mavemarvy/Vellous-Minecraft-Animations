@@ -41,7 +41,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          blender -b --python scripts/build_scene.py
+          blender -b --python-exit-code 1 --python scripts/build_scene.py
 
       - name: Combine animation and audio
         shell: bash
