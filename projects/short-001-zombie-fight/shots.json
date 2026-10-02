@@ -1,0 +1,52 @@
+{
+  "project": "short-001-zombie-fight",
+  "duration_seconds": 10,
+  "fps": 30,
+  "resolution": {
+    "width": 1080,
+    "height": 1920
+  },
+  "aspect_ratio": "9:16",
+  "shots": [
+    {
+      "id": "shot_001",
+      "start": 0.0,
+      "end": 2.0,
+      "description": "Steve crashes backward through a wooden wall while the camera tracks with him.",
+      "camera": "reverse tracking close shot",
+      "effects": ["wood debris", "dust", "selective motion blur", "light camera recoil"]
+    },
+    {
+      "id": "shot_002",
+      "start": 2.0,
+      "end": 4.0,
+      "description": "Steve rolls, slides and recovers while three zombies rush through the broken wall.",
+      "camera": "low-angle rising recovery shot",
+      "effects": ["dust trail", "small debris settling"]
+    },
+    {
+      "id": "shot_003",
+      "start": 4.0,
+      "end": 6.0,
+      "description": "Steve draws his sword and ducks underneath the first zombie attack.",
+      "camera": "tight action tracking shot",
+      "effects": ["weapon whoosh", "selective speed ramp", "motion blur"]
+    },
+    {
+      "id": "shot_004",
+      "start": 6.0,
+      "end": 8.0,
+      "description": "Steve lands a fast counter combo and launches the zombie sideways.",
+      "camera": "dynamic partial orbit",
+      "effects": ["impact particles", "camera recoil", "dust", "motion blur"]
+    },
+    {
+      "id": "shot_005",
+      "start": 8.0,
+      "end": 10.0,
+      "description": "Camera continues orbiting while Steve transitions into the next attack and the remaining zombies close in.",
+      "camera": "cinematic orbit to wider composition",
+      "effects": ["dramatic lighting", "ambient dust"]
+    }
+  ]
+}
