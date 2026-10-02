@@ -42,6 +42,8 @@ jobs:
         run: |
           set -euo pipefail
           blender -b --python-exit-code 1 --python scripts/build_scene.py
+          test -s projects/short-001-zombie-fight/exports/animation-silent.mp4
+          test -s projects/short-001-zombie-fight/exports/generated-preview-scene.blend
 
       - name: Combine animation and audio
         shell: bash
