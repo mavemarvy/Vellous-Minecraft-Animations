@@ -1,0 +1,34 @@
+name: Render Preview
+
+on:
+  workflow_dispatch:
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate starter project
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          test -f README.md
+          test -f docs/animation-rules.md
+          test -f docs/audio-policy.md
+          test -f projects/short-001-zombie-fight/script.md
+          test -f projects/short-001-zombie-fight/shots.json
+          test -f projects/short-001-zombie-fight/audio-plan.json
+
+          python3 -m json.tool projects/short-001-zombie-fight/shots.json >/dev/null
+          python3 -m json.tool projects/short-001-zombie-fight/audio-plan.json >/dev/null
+
+          echo "Vellous preview validation passed."
+
+      - name: Show project structure
+        shell: bash
+        run: |
+          find . -maxdepth 4 -type f -not -path './.git/*' | sort
